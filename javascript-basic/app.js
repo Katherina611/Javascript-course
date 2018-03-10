@@ -243,6 +243,78 @@ for (let i=0; i<cars.length; i++){
     console.log(cars[i].model)
 }
 
+//const in array&object
+const newArray= [1,2,3];
+newArray[0] = "New element in the array";
+newArray.push("Something new");
+console.log(newArray);
 
+const car = {
+    name: "Mustang",
+    engine: 6.4
+};
+car.name = "Challanger";// i can only assign one value, not object
+console.log(car);
 
+//functions
+//function declaration - I method
+function helloVisitor(name, surname){
+    console.log(`Hello ${name} ${surname} & welcome to our website`)
+}
+helloVisitor("Kasia", "Gacek");//a function must be called
+/*
+function helloVisitor(name = "Visitor", surname = " "){
+    console.log(`Hello ${name} ${surname} & welcome to our website`)
+}
+helloVisitor("Kasia");
+function with default parameters
+
+function helloVisitor(name, surname){
+    if(typeof name === 'undefined') {name = "Kasia"}
+    if(typeof name === 'undefined') {surname = "Gacek"}
+    console.log(`Hello ${name} ${surname} & welcome to our website`)
+}
+helloVisitor("Kasia");
+function with default parameters
+ */
+
+function addition(number1, number2){
+    return number1 + number2;
+}
+let resultAddition ;
+resultAddition = addition(1,3);
+resultAddition = addition(1,7);
+console.log(resultAddition);
+
+//function expression
+const sum = function (number1, number2){
+    return number1 + number2;
+};
+console.log(sum(3,3));
+
+//function that are invoked inmediately (IIFIEs)
+//Inmediately-invoked function expression
+(function(technology){
+    console.log("Learning " + technology)
+})("JacaScript");
+
+//property methods
+const musicPlayer = {
+    play: function(id){
+        console.log(`Playing song with the ID: ${id}`)
+    },
+    pause: function(){
+        console.log("Pause ...")
+    }
+};
+musicPlayer.play(2);
+musicPlayer.pause();
+//methods can be outside of the object
+musicPlayer.remove = function(id){
+    console.log(`Removed from the playlist, ID: ${id}`)
+};
+musicPlayer.remove(30);
+alert();
+prompt();
+confirm();
 
