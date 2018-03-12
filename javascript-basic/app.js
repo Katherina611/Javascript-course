@@ -338,6 +338,122 @@ today.setMonth("3");
 output2 = today.getMonth();
 console.log(today);
 
+// if operator
+const learningJavaScript = false;
+if(learningJavaScript){
+    console.log("great");
+}else{
+    console.log("so bad, JavaScript is great");
+}
+
+let score = 100;
+//equal
+if (score ==100){
+    console.log("Yes!!! is the same");
+}else{
+    console.log("No, is not the same");
+}
+//not equal
+if(score != 100){
+    console.log("yes, different")
+}else{
+    console.log("no, not different")
+}
+//strict comparisons operator
+if(score === "100"){
+    console.log("Yes!!! they are the same ")
+}else{
+    console.log("No, they're different");
+}
+
+if(score !== 100){
+    console.log("yes, different")
+}else{
+    console.log("no, not different")
+}
+
+//check if variable has a value
+let score1;
+if(typeof score1 !== "undefined"){
+    console.log(`Yes, and the score is ${score1}`)
+}else{
+    console.log("No score...")
+}
+
+let cash = 300;
+let cartTotal = 500;
+if(cash >= cartTotal){
+    console.log("Succesful Payment...")
+}else{
+    console.log("Insufficient Funds")
+}
+
+//else if operator
+let currentTime = 3;
+if(currentTime >0 && currentTime <= 12){
+    console.log("Good morning")
+}else if(currentTime >12 && currentTime <18){
+    console.log("Good afternoon")
+}else if(currentTime >18 && currentTime <=24){
+    console.log("Good night")
+}else {
+    console.log("Invalid")
+}
+
+//or operator
+let credit = 300,
+    available = cash + credit;
+if (cartTotal < cash || cartTotal <credit) {
+    console.log("You can pay with cash or credit")
+}else if(available >= cartTotal){
+    console.log("Pay with both")
+}else{
+    console.log("Insufficient Funds")
+}
+
+//ternary operator
+const loggedIn = false;
+console.log( loggedIn === true ? "The user is logged in!" : "Not logged in, please log in" );
+
+//switch
+const paymentMethod = "nothing";
+switch(paymentMethod){
+    case 'cash':
+        console.log(`Your payment method is: ${paymentMethod}`);
+        break;
+    case 'check':
+        console.log(`Your payment method is: ${paymentMethod} we will verify the funds...`);
+        break;
+    case 'card':
+        console.log(`Your payment method is: ${paymentMethod} processing`);
+        break;
+    default:
+        console.log("Please select a valid payment method ");
+        break;
+}
+//assign a variable from the switch case
+const carsName = ["Camaro", "Mustang", "Challenger"];
+const selected = 1;
+let carName;
+switch(selected){
+    case 0:
+        carName = carsName[0];
+        break;
+    case 1:
+        carName = carsName[1];
+        break;
+    case 2:
+        carName = carsName[2];
+        break;
+}
+console.log(`Your selected car is ${carName}`);
+
+//for loops in js
+
+
+
+
+
 
 
 
