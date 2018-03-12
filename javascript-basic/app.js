@@ -449,7 +449,178 @@ switch(selected){
 console.log(`Your selected car is ${carName}`);
 
 //for loops in js
+/*
+for (let i = 0; i <= 10; i++){
+    console.log(`Number: ${i}`)
+}
+*/
 
+//read a value in the for loop
+for (let i = 0; i <5; i++){
+    if(i ===2){
+        console.log("Yes! 2!");
+        continue;
+    }
+    console.log(`Number: ${i}`)
+}
+//break the for loop
+for (let i = 0; i <5; i++){
+    if(i ===2){
+        console.log("Yes! 2!");
+        break;
+    }
+    console.log(`Number: ${i}`)
+}
+
+for (let i = 0; i <5; i++){
+    if(i%2===0){
+        console.log(`${i} is even`)
+    }else{
+        console.log(`${i} is odd`)
+    }
+}
+//for loop for a shopping cart
+const shoppingCart = ["product1", "product2", "product3"];
+//access each value manually
+console.log(shoppingCart[0]);
+console.log(shoppingCart[1]);
+console.log(shoppingCart[2]);
+
+for (let i=0; i<shoppingCart.length; i++){
+    console.log(`Product: ${shoppingCart[i]}`)
+}
+
+//while loops
+/*
+let i = 0;
+while(i < 3){
+    console.log(`Number: ${i}`);
+    i++;
+}
+*/
+//looping an array with while
+let i=0;
+while(i < shoppingCart.length){
+    console.log(`Product: ${shoppingCart[i]}`);
+    i++;
+}
+
+//DO while loops
+let j = 0;
+do {
+    console.log(`Number: ${j}`);
+    j++;
+}while(j <5);
+
+//for loop
+const todo = ["Homework", "Food", "Project", "Learn JS"];
+for (let i = 0; i < todo.length; i++){
+    console.log(todo[i]);
+}
+//forEach
+todo.forEach(function(assigment, index){
+    console.log(`${index} : ${assigment}`)
+});
+
+//map
+const shoppingCarts = [
+    {id: 1, product:"book"},
+    {id: 2, product:"shirt"},
+    {id: 3, product:"album"}
+];
+const productName = shoppingCarts.map(function(productName){
+    return productName.product;
+});
+console.log(productName);
+
+//iterators in ES6
+let myCar = {
+    model: "mazda",
+    engine: 6.1,
+    year: 2018
+};
+for (let key in myCar){
+    console.log(`${key} : ${myCar[key]}`)
+}
+
+//try, catch, finnaly
+try{
+    getClients();
+} catch(error){
+    console.log(error);
+}finally{
+    console.log("Execute always no matter what!")
+}
+
+function getClients (){
+    console.log("Downloading...");
+    setTimeout(function(){
+        console.log("Complete...")
+    },3000)
+}
+getClients();
+
+//window object
+//confirm
+if(confirm("Are you sure?")){
+    console.log("Deleted...");
+}else{
+    console.log("Nothing happens");
+}
+
+//retrieve width and height of the window
+let height, width;
+height = window.outerHeight;
+width = window.outerWidth;//console + page
+
+height = window.innerHeight;//only page
+width = window.innerWidth;
+
+if (width > 1000){
+    document.body.style.backgroundColor = 'red';
+}else if(width > 500){
+    document.body.style.backgroundColor = 'blue';
+}else{
+    document.body.style.backgroundColor = 'green';
+}
+
+//location
+let urlLocation = window.location;
+console.log(urlLocation.host);
+console.log(urlLocation.hostname);
+console.log(urlLocation.port);
+console.log(urlLocation);
+
+//redirect via js
+//window.location.href = "http://google.com";
+
+//variable scope
+let a = "a";
+let b = "b";
+const c = "c";
+
+//function scope
+function functionScope(){
+    let a = "A";
+    let b = "B";
+    const c = "C";
+    console.log("FUNCTION SCOPE: "+ a,b,c);//variable exsist only in this function, if we remove variable a("A) in console we will have a("a")
+}
+functionScope();
+
+//block scope (if statements or for)
+if(true){
+    let a = "AA";
+    let b = "BB";
+    const c = "CC";
+    console.log("BLOCK SCOPE: "+ a,b,c);
+}
+
+// for loop
+for (let a = 0; a <5; a++){
+    console.log(a)
+}
+console.log("GLOBAL: "+ a,b,c);
 
 
 
