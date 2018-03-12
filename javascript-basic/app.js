@@ -314,7 +314,31 @@ musicPlayer.remove = function(id){
     console.log(`Removed from the playlist, ID: ${id}`)
 };
 musicPlayer.remove(30);
-alert();
-prompt();
-confirm();
+// function
+//alert();
+//prompt();
+//confirm();
+
+//dates in Javascript
+const today = new Date();
+let birthday = new Date(" September 6 1993");
+birthday = new Date("9-6-1993");
+//methods in Date
+let output2;
+output2 = today.getMonth();
+output2 = today.getDate();
+output2 = today.getDay();
+output2 = today.getFullYear();
+output2 = today.getMinutes();
+output2 = today.getHours();
+//change date values
+today.setFullYear("2000");
+output2 = today.getFullYear();
+today.setMonth("3");
+output2 = today.getMonth();
+console.log(today);
+
+
+
+
 
