@@ -220,7 +220,60 @@ element1 = link1.hasAttribute('data-link');
 element1 = link1.removeAttribute('data-link');
 console.log(element1);
 
+//addEventListener
+const clearCartBtn = document.getElementById('clear-cart');
+clearCartBtn.addEventListener('click',clearBtnFunction);
+function clearBtnFunction(event){
+    //target
+    let elementRemove;
+    elementRemove = event;
+    //read the target
+    elementRemove = event.target;
+    elementRemove = event.target.id;
+    elementRemove = event.target.className;
+    elementRemove = event.target.innerText;
+    console.log(elementRemove);
+}
+//mouse events
 
+function printEvent(event){
+    /*if(searchInput.value.length ===0){
+        alert("Type something")
+    }*/ //validate
+    //event.preventDefault(); when submit
+    console.log(searchInput.value);
+    console.log(`the event is: ${event.type}`)
+}
+//click mouse event
+//clearCartBtn.addEventListener('click',printEvent);
+//double click
+clearCartBtn.addEventListener('dblclick',printEvent);
+//mouse enter
+clearCartBtn.addEventListener('mouseenter',printEvent);
+//mouse leave
+clearCartBtn.addEventListener('mouseleave',printEvent);
+//mouse over
+clearCartBtn.addEventListener('mouseover',printEvent);
+//mouse out
+clearCartBtn.addEventListener('mouseout',printEvent);
+//mouse up
+clearCartBtn.addEventListener('mouseup',printEvent);
+//mouse down
+clearCartBtn.addEventListener('mousedown',printEvent);
 
+//input and form events
+const searchForm = document.getElementById('search'),
+      searchInput = document.getElementById('search-course');
+//events for <form>
+searchForm.addEventListener('submit', printEvent);
 
-
+//input events
+//searchInput.addEventListener('keydown', printEvent);
+//searchInput.addEventListener('keyup', printEvent);
+//searchInput.addEventListener('keypress', printEvent);
+//searchInput.addEventListener('focus', printEvent);
+//searchInput.addEventListener('blur', printEvent);
+//searchInput.addEventListener('cut', printEvent);
+//searchInput.addEventListener('copy', printEvent);
+//searchInput.addEventListener('paste', printEvent);
+searchInput.addEventListener('input', printEvent);
