@@ -277,3 +277,68 @@ searchForm.addEventListener('submit', printEvent);
 //searchInput.addEventListener('copy', printEvent);
 //searchInput.addEventListener('paste', printEvent);
 searchInput.addEventListener('input', printEvent);
+
+//event bubbling
+const cardCourse = document.querySelector('.card'),
+      infoCards = document.querySelector('.info-card'),
+      addCartBtn = document.querySelector('.add-to-cart');
+cardCourse.addEventListener('click', function(event){
+    console.log('You clicked the card');
+    event.stopPropagation();
+});
+infoCards.addEventListener('click', function(event){
+    console.log('You clicked the info');
+    event.stopPropagation();
+});
+addCartBtn.addEventListener('click', function(event){
+    console.log('You clicked the button');
+    event.stopPropagation();
+});
+//delegation
+const shoppingCart = document.querySelector('#shopping-cart');
+shoppingCart.addEventListener('click', removeProductFromCart);
+
+function removeProductFromCart(event){
+    console.log(event.target);
+    if (event.target.classList.contains('remove')){
+        event.target.parentElement.parentElement.remove();
+    }
+}
+//add to cart
+const courseList = document.querySelector('#courses-list');
+courseList.addEventListener('click',addToCart);
+function addToCart(event){
+    if (event.target.classList.contains('add-to-cart')){
+        console.log("courses added");
+    }
+}
+console.log(courseList);
+//local storage
+
+//add to local storage
+localStorage .setItem('name', "Kasia");
+
+// add to session storage
+//sessionStorage.setItem('name', 'Kasia');
+
+//remove from the storage
+localStorage.removeItem('name');
+
+//read the value
+//const name = localStorage.getItem('name');
+//console.log(name);
+//clear the storage
+//localStorage.clear();
+//localStorage .setItem('name', "Kasia");
+//localStorage .setItem('name', "Walter White"); overwrite variable
+const localStorageContent = localStorage.getItem('names');
+let names;
+if(localStorageContent === null){
+    names = []
+}else{
+    names = JSON.parse(localStorageContent)
+}
+
+names.push("JavaScript");
+
+localStorage.setItem('names',JSON.stringify(names));
