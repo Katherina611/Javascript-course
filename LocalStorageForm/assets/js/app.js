@@ -46,6 +46,8 @@ function removeTweet(event){
     if(event.target.classList.contains('remove-tweet')){
         event.target.parentElement.remove();
     }
+    //remove from storage
+    removeTweetLocalStorage(event.target.parentElement.textContent);
 }
 
 //addes the tweets to loacl storage
@@ -88,4 +90,19 @@ function localStorageOnLoad(){
         //add <li> to the list
         tweetList.appendChild(li);
     })
+}
+
+//remove the tweet from local storage
+function removeTweetLocalStorage(tweet){
+    //get tweets from storage
+    let tweets = getTweetsFromStorage();
+    //remove the X from the tweet
+    const tweetDelete = tweet.substring(0, tweet.length-1);
+    //loop throught the tweet and remove the tweets that's equal
+    tweets.forEach(function(tweetLS){
+        if(tweetDelete === tweetLS){
+            console.log('yes');
+        }
+    })
+
 }
