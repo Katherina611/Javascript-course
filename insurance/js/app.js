@@ -22,12 +22,17 @@ function eventListeners(){
         if(make === '' || year === '' ||level === ''){
             html.displayError('All the fields are mandatory');
         }else{
+            //clear the previous quote
+            const prevResult = document.querySelector('#result div');
+            if(prevResult !== null){
+                prevResult.remove();
+            }
             //make the quotation
             const insurance = new Insurance(make, year, level);
             const price = insurance.calculateQuotation(insurance);
 
             //print the result from the HTMLUI()
-            html.showResult(price);
+            html.showResult(price, insurance);
         }
     });
 }
@@ -130,15 +135,39 @@ HTMLUI.prototype.displayError = function(message){
     },3000);
 };
 //prints the result into the HTML
-HTMLUI.prototype.showResult = function(price){
+HTMLUI.prototype.showResult = function(price, insurance){
     //print the result
     const result = document.getElementById('result');
     //create a div with the result
     const div = document.createElement('div');
+    //get make from the object and assign as readable name
+    let make = insurance.make;
+    switch(make){
+        case '1':
+            make = "American";
+            break;
+        case '2':
+            make = "Asian";
+            break;
+        case '3':
+            make = "European";
+            break;
+    }
+    console.log(make);
     //insert the result
     div.innerHTML = `
-        <p class = 'total'>Total: $ ${price} </p>
+        <p class = 'header'>Summary</p>
+        <p>Make: ${make} </p>
+        <p>Year: ${insurance.year}</p>
+        <p>Level: ${insurance.level}</p>
+        <p class = 'total'>Total: $ ${price}</p>
     `;
-    //insert this into the HTML
-    result.appendChild(div);
+    const spinner = document.querySelector('#loading img');
+    spinner.style.display = 'block';
+    setTimeout(function(){
+        spinner.style.display = 'none';
+        //insert this into the HTML
+        result.appendChild(div);
+    },3000);
+
 };
