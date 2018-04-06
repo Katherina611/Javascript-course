@@ -29,13 +29,11 @@ function loadNames(e) {
 
      //fetch API
     fetch(url)
-        .then(function(response){
-             return response.json();
-        })
-        .then(function(names){
+        .then(response => response.json())
+        .then(names => {
              let html = '<h2>Generated names</h2>';
              html += '<ul class="list">';
-             names.forEach(function(name){
+             names.forEach(name => {
                  html += `
                         <li>${name.name}</li>
                  `;
@@ -45,8 +43,6 @@ function loadNames(e) {
 
 
         })
-        .catch(function(error){
-             console.log(error);
-        })
+        .catch(error => console.log(error))
      
 }
