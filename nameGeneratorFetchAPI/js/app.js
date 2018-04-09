@@ -28,12 +28,12 @@ function loadNames(e) {
      }
 
      //fetch API
-    fetch(url)
-        .then(response => response.json())
+     getNames(url)
         .then(names => {
+             let namesResponse = names.names;
              let html = '<h2>Generated names</h2>';
              html += '<ul class="list">';
-             names.forEach(name => {
+             namesResponse.forEach(name => {
                  html += `
                         <li>${name.name}</li>
                  `;
@@ -45,4 +45,12 @@ function loadNames(e) {
         })
         .catch(error => console.log(error))
      
+}
+
+async function getNames(url) {
+    const response = await fetch(url);
+    const names = await response.json();
+    return {
+        names
+    }
 }
