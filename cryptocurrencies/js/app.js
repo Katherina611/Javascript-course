@@ -15,7 +15,7 @@ form.addEventListener('submit', (event) => {
     //validate that selects have sth
     if(currencySelect === '' || cryptoCurrencySelect ===""){
         //display an error
-        console.log('error');
+        ui.printMessage('All the fields are mendatory','deep-orange darken-4 card-panel');
     }else{
         console.log('success');
     }
