@@ -35,6 +35,10 @@ class UI {
         setTimeout(() =>{
             document.querySelector('.messages div').remove();
         },3000)
-
     }
+    //print the result of the valuation/rate
+    displayResult(result){
+        console.log(result);
+    }
+
 }
