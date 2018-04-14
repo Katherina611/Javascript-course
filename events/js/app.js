@@ -11,10 +11,23 @@ document.getElementById('submitBtn').addEventListener('click',(event)=>{
     //console.log(eventName + ':' + category);
     if(eventName !== ''){
         //query event brite API
+        eventbrite.queryAPI(eventName, category)
+            .then(events => {
+                //check for the events
+                const eventsList = events.events.events;
+                if(eventsList.length > 0){
+                    //print the events
+
+                }else{
+                    //there are no events, print a message
+                    ui.printMessage('No results found', 'text-center alert alert-danger mt-4');
+
+                }
+            })
 
     }else{
         //print a message
-        ui.printMessage('Add an event or city', 'text-center alert alert-danger mt-4')
+        ui.printMessage('Add an event or city', 'text-center alert alert-danger mt-4');
     }
 
 });
