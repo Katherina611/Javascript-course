@@ -85,4 +85,45 @@ let {
 console.log(living);
 console.log(third);
 
+//destructuring function (old method)
+function reservation(complete, options){
+    options = options || {};
+    let payment = options.paymentMethod,
+        amount = options.amount,
+        days = options.days;
+    console.log(payment);
+    console.log(amount);
+    console.log(days);
+}
+reservation(
+    true,
+    {
+        paymentMethod:'creditCard',
+        amount:3000,
+        days:3
+    }
+);
+
+//destructuring function (new method) with default parameters
+function reservationNew(complete,
+                        {
+                            paymentMethod='cash',
+                            amount = 0,
+                            days = 0
+                        } = {}
+                        ){
+    console.log(paymentMethod);
+    console.log(amount);
+    console.log(days);
+}
+reservationNew(
+    true,
+    {
+        paymentMethod:'creditCard',
+        amount:33000,
+        days:5
+    }
+);
+
+
 
