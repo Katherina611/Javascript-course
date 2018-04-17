@@ -125,5 +125,36 @@ reservationNew(
     }
 );
 
+//symbols
+const client3 = Symbol('client symbol');
+console.log(client3);
+//symbols are always different
+console.log(Symbol() === Symbol());
+
+let firstName = Symbol();
+let lastName = Symbol();
+//create an empty object
+const person = {};
+person[firstName] = 'Kasia';
+person[lastName] = 'Gacek';
+//standard properties
+person.membership = 'Premium';
+person.amount = 500;
+console.log(person);
+
+for(let i in person){
+    console.log(`${person[i]}`);
+}
+
+//you can also add a description
+let clientName = Symbol('client name');
+let client4 = {};
+client4[clientName] = 'Peter';
+console.log(client4);
+console.log(client4[clientName]);
+
+
+
+
 
 
