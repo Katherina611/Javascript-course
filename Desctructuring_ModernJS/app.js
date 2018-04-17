@@ -58,3 +58,31 @@ let {name, membership = 'Standard', balance = 200} = client1;
 console.log(name);
 console.log(membership);
 console.log(balance);
+
+//destruuring with array
+let cities =[, , , 'New York'];
+let  [firstCitie, seconCity, another, newYork] = cities;
+console.log(newYork);
+//more in deepth example
+const client2 = {
+    membership:'Premium',
+    balance:30000,
+    data:{
+        name:'Paul',
+        lastName:'Banks',
+        living:{
+            city:'London',
+            country:'UK'
+        }
+    },
+    lastMovements:['12-03-2018', '12-07-2018','06-10-2018']
+};
+
+let {
+    data:{living},
+    lastMovements:[, , third]
+} = client2;
+console.log(living);
+console.log(third);
+
+
