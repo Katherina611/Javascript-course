@@ -153,6 +153,38 @@ client4[clientName] = 'Peter';
 console.log(client4);
 console.log(client4[clientName]);
 
+//sets
+let shoppingCart = new Set();
+shoppingCart.add('shirt');
+shoppingCart.add('album #1');
+shoppingCart.add('album #1');
+shoppingCart.add('guitar');
+
+
+//get lenght of the set
+console.log(shoppingCart.size);
+
+//check if the value exist on the set
+console.log(shoppingCart.has('guitar'));
+
+//remove from the set
+shoppingCart.delete('guitar');
+
+//clear the set
+//shoppingCart.clear();
+
+//for each
+shoppingCart.forEach((product,index, isPart) =>{
+    console.log(`${index} : ${product}`);
+    console.log(isPart === shoppingCart);
+});
+
+//convert set into an array
+const shoppingCartArray = [...shoppingCart];
+console.log(shoppingCartArray);
+
+
+
 
 
 
