@@ -183,6 +183,57 @@ shoppingCart.forEach((product,index, isPart) =>{
 const shoppingCartArray = [...shoppingCart];
 console.log(shoppingCartArray);
 
+//maps
+let client5 = new Map();
+client5.set('name', 'Karen');
+client5.set('membership', 'Premium');
+//access the value
+console.log(client5.get('name'));
+
+//for each into a map
+client5.forEach((clientInfo, index) =>{
+    console.log(`${index} : ${clientInfo}`)
+});
+//map size
+console.log(client5.size);
+
+//chech if the values exist
+console.log(client5.has('membership'));
+console.log(client5.get('membership'));
+
+//remove elements fro the map
+client5.delete('name');
+//client5.clear();
+
+//default values into the map
+const patient = new Map([['name', 'patients name'], ['room', 'not defined']]);
+patient.set('name', 'Paul');
+patient.set('room', '404');
+
+console.log(patient);
+
+//iterators
+function createIterator(cart){
+    let i = 0;
+    return {
+        nextProduct: function(){
+            let end = (i >= cart.length);
+            let value = !end ? cart[i++] : undefined;
+            return {
+                end:end,
+                value: value
+            }
+        }
+    }
+}
+const shopCart = ['product 1', 'product 2', 'product 3'];
+const shopCartIterator = createIterator(shopCart);
+console.log(shopCartIterator.nextProduct());
+console.log(shopCartIterator.nextProduct());
+console.log(shopCartIterator.nextProduct());
+console.log(shopCartIterator.nextProduct());
+
+
 
 
 
