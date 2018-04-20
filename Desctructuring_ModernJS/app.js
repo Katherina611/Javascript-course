@@ -233,10 +233,110 @@ console.log(shopCartIterator.nextProduct());
 console.log(shopCartIterator.nextProduct());
 console.log(shopCartIterator.nextProduct());
 
+//generators
+function *createGenerator(){
+    //yield
+    yield  1;
+    yield  'Name of the person';
+    yield 3 + 3;
+    yield true;
+    yield 'hello from generator'
+}
+const iterator = createGenerator();
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+console.log(iterator.next().done);
 
 
+function *newGenerator(cart){
+    for(let i = 0; i < cart.length; i++){
+        yield cart[i]
+    }
+}
 
+const cart = ['product 1', 'product 2', 'product 3'];
 
+//loop in the iterators
+let iterators = newGenerator(cart);
+console.log(iterators.next());
+console.log(iterators.next());
+console.log(iterators.next());
+
+//build iterator
+const citiesArray = ['London', 'Paris', 'Madrid'];
+const orders = new Set([123,231,131,102]);
+const data = new Map();
+data.set('learning', 'modern JS');
+data.set('JSisGreat', true);
+//entries
+for(let entry of citiesArray.entries()){
+    //console.log(entry[0]);
+}
+
+for(let entry of orders.entries()){
+    //console.log(entry);
+}
+
+for(let entry of data.entries()){
+    //console.log(entry);
+}
+
+//values
+for(let entry of citiesArray){
+    //console.log(entry);
+}
+
+for(let entry of orders.values()){
+    //console.log(entry);
+}
+
+for(let entry of data.values()){
+    console.log(entry);
+}
+
+//keys
+for(let entry of citiesArray.keys()){
+    //console.log(entry);
+}
+
+for(let entry of orders.keys()){
+    //console.log(entry);
+}
+
+for(let entry of data.keys()){
+    //console.log(entry);
+}
+
+//deafault
+for(let entry of citiesArray){
+    //console.log(entry);
+}
+
+for(let entry of orders){
+    console.log(entry);
+}
+
+for(let entry of data){
+    console.log(entry);
+}
+
+//iterate a string
+const message = 'Learning JS';
+//old way
+for (let i = 0; i < message.length; i++){
+    console.log(message[i]);
+}
+/*
+for (let letter of message){
+    console.log(message);
+}
+*/
+
+const anchors = document.getElementsByTagName('a');
+for (let anchor of anchors){
+    console.log(anchor.href);
+}
 
 
 
