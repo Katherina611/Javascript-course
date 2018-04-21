@@ -338,6 +338,73 @@ for (let anchor of anchors){
     console.log(anchor.href);
 }
 
+//regular expression
+const exp1 = new RegExp('abc');
+const exp2 = /abc/;
+const year = 1993;//true
+console.log(/[0-9]/.test(year));
+
+//check if a date follows the pattern 20-10-2018
+const dateRegExp = /\d{1,2}-\d{1,2}-\d{1,4}/; // old version /\d\d-\d\d-\d\d\d\d/
+const date = '20-01-2018';
+console.log(dateRegExp.test(date));
+
+//check for the time 14:00
+const timeRegExp = /\d\d:\d\d/;
+const time = '10:15 AM';
+console.log(timeRegExp.test(time));
+
+//check for the time in 12 hours with AM/PM
+const timeRegExpComplete = /\d\d:\d\d\D\D/;
+let completeTime;
+completeTime = '08:30 PM';
+console.log(timeRegExpComplete.test(completeTime));
+const numbersRegExp = /\d\d\d\d/;// or /\d+/
+const digits = 1234;
+console.log(numbersRegExp.test(digits));
+
+//deny the expression
+const denyRegExp = /\[^0-9]/;
+const number = 1234;///false
+console.log(denyRegExp.test(number));
+
+//check for letters or numbers
+const messageRegExp = /\w+/;
+let message1;
+message1 = 'test message';
+message1 = 1234;
+message1 = '';//false
+message1 = 'hello@mail.com';
+console.log(messageRegExp.test(message1));
+
+//check for numbers
+const checkNumbers = /([0-9])\w+/;
+const numb = 1234;
+console.log(checkNumbers.test(numb));
+
+//evaluate to uppercase only
+const checkForUpperCase = /([A-Z])\w+/;
+let message2;
+message2 = 1234;
+message2 = 'message';
+message2 = 'MESSAGE';
+console.log(checkForUpperCase.test(message2));
+
+//evaluate to lowwercase only
+const checkForLowerCase = /([a-z])\w+/;
+let message3;
+message3 = 1234;
+message3= 'message';
+message3 = 'MESSAGE';
+
+console.log(checkForLowerCase.test(message3));
+
+
+
+
+
+
+
 
 
 
