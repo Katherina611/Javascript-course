@@ -1,5 +1,6 @@
 //instanciate the classes
-const ui = new UI();
+const ui = new UI(),
+      coctail = new CocktailAPI();
 //create event listeners
 function eventListeners(){
     //add event listener when form is submitted
@@ -21,7 +22,17 @@ function getCoctails(event){
         ui.printMessage('Please add somrthing into the form', 'danger');
 
     }else{
-        console.log('query the REST API');
+        //query by the name of the drink
+        coctail.getDrinksByName(searchTerm)
+            .then(coctails =>{
+                if(coctails.coctails.drinks === null){
+                    //nothing exists
+                    ui.printMessage("There're no results, try a different term", 'danger');
+                }else{
+                    console.log(coctails);
+                }
+            })
+
     }
 
 
