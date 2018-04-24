@@ -29,7 +29,7 @@ function getCoctails(event){
                     //nothing exists
                     ui.printMessage("There're no results, try a different term", 'danger');
                 }else{
-                    console.log(coctails);
+                    ui.displayDrinksWithIngerdients(coctails.coctails.drinks);
                 }
             })
 
