@@ -8,6 +8,11 @@ function eventListeners(){
     if (searchForm){
         searchForm.addEventListener('submit', getCoctails);
     }
+    //the results div listeners
+    const resultsDiv = document.querySelector('#results');
+    if(resultsDiv){
+        resultsDiv.addEventListener('click', resultsDelegation);
+    }
 
 }
 eventListeners();
@@ -55,5 +60,17 @@ function getCoctails(event){
 
     }
 
+}
 
+//delegation for the results area
+function resultsDelegation(event){
+    event.preventDefault();
+    if(event.target.classList.contains('get-recipe')){
+        coctail.getSingleRecipe(event.target.dataset.id)
+            .then(recipe =>{
+                //displays single recipe into a modal
+                ui.displaySingleRecipe(recipe.recipe.drinks[0])
+
+            })
+    }
 }
