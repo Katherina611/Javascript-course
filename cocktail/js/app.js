@@ -3,6 +3,8 @@ const ui = new UI(),
       coctail = new CocktailAPI();
 //create event listeners
 function eventListeners(){
+    //document ready
+    document.addEventListener('DOMContentLoaded', documentReady);
     //add event listener when form is submitted
     const searchForm = document.querySelector('#search-form');
     if (searchForm){
@@ -73,4 +75,14 @@ function resultsDelegation(event){
 
             })
     }
+}
+
+//document ready
+function documentReady() {
+    //select the saerch category select
+    const searchCategory = document.querySelector('.search-category');
+    if(searchCategory){
+        ui.displayCategories();
+    }
+
 }

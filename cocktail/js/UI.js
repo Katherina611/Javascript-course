@@ -1,4 +1,23 @@
 class UI{
+    //display all the drink categories
+    displayCategories(){
+        const categoryList = coctail.getCategories()
+            .then(categories =>{
+                const catList = categories.categories.drinks;
+                //append a first option without value
+                const firstOption = document.createElement('option');
+                firstOption.textContent = '- Select -';
+                document.querySelector('#search').appendChild(firstOption);
+                //append into the select
+                catList.forEach(category =>{
+                    const option = document.createElement('option');
+                    option.textContent = category.strCategory;
+                    option.value = category.strCategory.split(' ').join('_');
+                    document.querySelector('#search').appendChild(option);
+                })
+            })
+
+    }
     //display the coctails without ingredient
     displayDrink(drinks){
         const resultsWrapper = document.querySelector('.results-wrapper');
