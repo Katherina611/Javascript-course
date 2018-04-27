@@ -41,8 +41,10 @@ function getCoctails(event){
             case 'ingredient':
                 serverResponse = coctail.getDrinksByIngredient(searchTerm);
                 break;
+            case 'category':
+                serverResponse = coctail.getDrinksByCategory(searchTerm);
+                break;
         }
-
         ui.clearResults();
         //query by the name of the drink
         serverResponse.then(coctails =>{
