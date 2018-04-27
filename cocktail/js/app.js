@@ -44,6 +44,9 @@ function getCoctails(event){
             case 'category':
                 serverResponse = coctail.getDrinksByCategory(searchTerm);
                 break;
+            case 'alcohol':
+                serverResponse = coctail.getDrinksByAlcohol(searchTerm);
+                break;
         }
         ui.clearResults();
         //query by the name of the drink
