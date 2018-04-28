@@ -80,6 +80,18 @@ function resultsDelegation(event){
 
             })
     }
+    //when favourite btn is clicked
+    if(event.target.classList.contains('favorite-btn')){
+        if(event.target.classList.contains('is-favorite')){
+            //remove the class
+            event.target.classList.remove('is-favorite');
+            event.target.textContent = '+';
+        }else{
+            //add the class
+            event.target.classList.add('is-favorite');
+            event.target.textContent = '-';
+        }
+    }
 }
 
 //document ready
