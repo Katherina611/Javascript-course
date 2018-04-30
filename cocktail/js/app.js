@@ -1,6 +1,7 @@
 //instanciate the classes
 const ui = new UI(),
-      coctail = new CocktailAPI();
+      coctail = new CocktailAPI(),
+      coctailDB = new CoctailDB();
 //create event listeners
 function eventListeners(){
     //document ready
@@ -90,6 +91,16 @@ function resultsDelegation(event){
             //add the class
             event.target.classList.add('is-favorite');
             event.target.textContent = '-';
+            //get info
+            const cardBody = event.target.parentElement;
+            const drinkInfo = {
+                id:event.target.dataset.id,
+                name: cardBody.querySelector('.card-title').textContent,
+                image: cardBody.querySelector('.card-img-top').src
+
+            };
+            //add into the storage
+            coctailDB.saveIntoDB(drinkInfo);
         }
     }
 }
