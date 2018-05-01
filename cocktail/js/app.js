@@ -112,5 +112,14 @@ function documentReady() {
     if(searchCategory){
         ui.displayCategories();
     }
+    //when favorites page
+    const favoritesTable = document.querySelector('#favorites');
+    if(favoritesTable){
+        //get the favorites from the storage and display them
+        const drinks = coctailDB.getFromDB();
+        ui.displayFavorites(drinks);
+    }
 
 }
+
+
