@@ -159,4 +159,8 @@ class UI{
         });
 
     }
+    //remove single favorite from DOM
+    removeFavorite(element){
+        element.remove();
+    }
 }

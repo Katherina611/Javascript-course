@@ -118,6 +118,24 @@ function documentReady() {
         //get the favorites from the storage and display them
         const drinks = coctailDB.getFromDB();
         ui.displayFavorites(drinks);
+        //when view ir remove is clicked
+        favoritesTable.addEventListener('click',(event)=>{
+            event.preventDefault();
+            //delegation
+            if(event.target.classList.contains('get-recipe')){
+                coctail.getSingleRecipe(event.target.dataset.id)
+                    .then(recipe =>{
+                        //displays single recipe into a modal
+                        ui.displaySingleRecipe(recipe.recipe.drinks[0])
+
+                    })
+            }
+            //when remobe btn is clicked in favorites
+            if(event.target.classList.contains('remove-recipe')){
+                //remove from DOM
+                ui.removeFavorite(event.target.parentElement.parentElement);
+            }
+        });
     }
 
 }
