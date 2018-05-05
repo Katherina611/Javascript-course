@@ -61,8 +61,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="148" />
-    <option name="y" value="136" />
+    <option name="x" value="149" />
+    <option name="y" value="183" />
     <option name="width" value="1104" />
     <option name="height" value="632" />
   </component>
@@ -103,7 +103,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nameGeneratorFetchAPI" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="JavaScriptPreferStrict" value="false" />
@@ -134,15 +134,15 @@
       <workItem from="1522844479071" duration="862000" />
       <workItem from="1522917433853" duration="2598000" />
       <workItem from="1523034210726" duration="12000" />
-      <workItem from="1523036677221" duration="396000" />
+      <workItem from="1523036677221" duration="462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3868000" />
+    <option name="totallyTimeSpent" value="3934000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="148" y="136" width="1104" height="632" extended-state="0" />
+    <frame x="149" y="183" width="1104" height="632" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

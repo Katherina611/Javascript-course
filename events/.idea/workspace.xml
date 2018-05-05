@@ -17,7 +17,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
+            <state relative-caret-position="342">
               <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
               <folding />
             </state>
@@ -27,7 +27,7 @@
       <file leaf-file-name="eventbrite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/eventbrite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="234">
               <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
@@ -46,7 +46,6 @@
                 <marker date="1523706206949" expanded="true" signature="649:788" ph="..." />
                 <marker date="1523706206949" expanded="true" signature="832:1081" ph="..." />
                 <marker date="1523706206949" expanded="true" signature="880:1081" ph="..." />
-                <marker date="1523706206949" expanded="true" signature="3149:3155" ph="..." />
               </folding>
             </state>
           </provider>
@@ -129,7 +128,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desctructuring_ModerJS" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="JavaScriptPreferStrict" value="false" />
@@ -158,12 +157,13 @@
       <option name="presentableId" value="Default" />
       <updated>1523640318382</updated>
       <workItem from="1523640320097" duration="2893000" />
-      <workItem from="1523693931934" duration="6376000" />
+      <workItem from="1523693931934" duration="6435000" />
+      <workItem from="1523907523945" duration="118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9269000" />
+    <option name="totallyTimeSpent" value="9446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="184" y="103" width="1104" height="632" extended-state="0" />
@@ -233,8 +233,23 @@
             <marker date="1523706206949" expanded="true" signature="649:788" ph="..." />
             <marker date="1523706206949" expanded="true" signature="832:1081" ph="..." />
             <marker date="1523706206949" expanded="true" signature="880:1081" ph="..." />
-            <marker date="1523706206949" expanded="true" signature="3149:3155" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/eventbrite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -242,22 +257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/eventbrite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -273,7 +272,6 @@
             <marker date="1523706206949" expanded="true" signature="649:788" ph="..." />
             <marker date="1523706206949" expanded="true" signature="832:1081" ph="..." />
             <marker date="1523706206949" expanded="true" signature="880:1081" ph="..." />
-            <marker date="1523706206949" expanded="true" signature="3149:3155" ph="..." />
           </folding>
         </state>
       </provider>

@@ -16,5 +16,11 @@
           "name" : "Alexa",
           "company": "EasyWebDev",
           "job" : "App Developer"
+     },
+     {
+          "id" : 4,
+          "name" : "Kasia",
+          "company": "EasyWebDev",
+          "job" : "App Developer"
      }
 ]
