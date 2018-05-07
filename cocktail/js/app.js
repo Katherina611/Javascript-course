@@ -87,6 +87,8 @@ function resultsDelegation(event){
             //remove the class
             event.target.classList.remove('is-favorite');
             event.target.textContent = '+';
+            //remove from the storage
+            coctailDB.removeFromDB(event.target.dataset.id);
         }else{
             //add the class
             event.target.classList.add('is-favorite');
@@ -107,6 +109,8 @@ function resultsDelegation(event){
 
 //document ready
 function documentReady() {
+    //display on load the favorites from storage
+    ui.isFavorite();
     //select the saerch category select
     const searchCategory = document.querySelector('.search-category');
     if(searchCategory){
