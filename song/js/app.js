@@ -19,8 +19,21 @@ UI.searchForm.addEventListener('submit', (e)=>{
         const lyric = new API(artistName, songName);
         lyric.queryAPI()
             .then(data =>{
-                let result = data.lyric.lyrics;
-                UI.resultDIv.textContent = result;
+
+                if(data.lyric.lyrics){
+                    //a song was found
+                    let result = data.lyric.lyrics;
+                    UI.resultDIv.textContent = result;
+                }else{
+                    //no results found
+                    UI.messageDiv.innerHTML = "No lyrics found";
+                    UI.messageDiv.classList.add('error');
+                    setTimeout(()=>{
+                        UI.messageDiv.innerHTML = "";
+                        UI.messageDiv.classList.remove('error');
+                        UI.searchForm.reset();
+                    },3000);
+                }
             })
         
     }
